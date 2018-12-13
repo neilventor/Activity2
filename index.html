@@ -13,6 +13,8 @@
     2nd Number: <input type="text" id="Input2" /><br>
     <input type="button" onClick="Multiply()" Value="Multiply" />
     <input type="button" onClick="Divide()" Value="Divide" />
+    <input type="button" onClick="Add()" Value="Add" />
+    <input type="button" onClick="Subtract()" Value="Subtract" />
 </form>
     <p>The Result is : <br>
 <span id = "result"></span>
@@ -29,8 +31,21 @@ function Divide()
 { 
         Input1 = document.getElementById("Input1").value;
         Input2 = document.getElementById("Input2").value;
-document.getElementById("result").innerHTML = Input1 / Input2;
+        document.getElementById("result").innerHTML = Input1 / Input2;
 }
+function Add() 
+{ 
+        var y = document.getElementById("Input1").value;
+        var z = document.getElementById("Input2").value;
+        var x = Number(y) + Number(z);
+document.getElementById("result").innerHTML = x;
+}
+function Subtract() 
+{ 
+        Input1 = document.getElementById("Input1").value;
+        Input2 = document.getElementById("Input2").value;
+document.getElementById("result").innerHTML = Input1 - Input2;
+}    
 </script>
 </body>
 </html>
